@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block maincontent %}
+
+<style>
+  .custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .custom-radio .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 1px #28a745, 0 0 0 3px rgba(40, 167, 69, 0.25);
+  }
+  
+  .custom-radio .custom-control-input:active~.custom-control-label::before {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+
+  .resizable {
+    resize: none; 
+}
+
+</style>
+
+{% comment %} mini nav start {% endcomment %}
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a href="cart.html">Cart</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Checkout</strong></div>
+        </div>
+      </div>
+    </div>
+{% comment %} mini nav ends {% endcomment %}
+    
+
+{% comment %} firt form start {% endcomment %}
+{% include "CheckoutPage/checkout_form.html" %}
+{% comment %} first form ends {% endcomment %}
+<br><br>
+
+
+{% comment %} coupone form start {% endcomment %}
+{% include "CheckoutPage/coupoune.html" %}
+{% comment %} coupoune form end {% endcomment %}
+
+{% endblock maincontent %}

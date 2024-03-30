@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block maincontent %}
+
+{% comment %} landing image start {% endcomment %}
+{% include "ShopPage/landing_image.html" %}
+{% comment %} landing image ends {% endcomment %}
+
+{% comment %} small nav starts here {% endcomment %}
+<div class="custom-border-bottom py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+    </div>
+  </div>
+</div>
+{% comment %} small nav ends here {% endcomment %}
+
+
+<div class="site-section">
+  <div class="container">
+
+    <div class="row mb-5">
+      <div class="col-md-12 order-1">
+
+        <div class="row align">
+          {% comment %} our filters start here {% endcomment %}
+          {% include "ShopPage/filters.html" %}
+          {% comment %} our filters ends here {% endcomment %}
+        </div>
+        <div class="row mb-5">
+
+           {% comment %} our product card goes here {% endcomment %}
+      
+          {% include "ShopPage/produts_card.html" %}
+          
+          {% comment %} euta matra vaye pugca bhitra gayera loop hunca {% endcomment %}
+          {% include "ShopPage/produts_card.html" %}
+
+          {% include "ShopPage/produts_card.html" %}
+
+          {% include "ShopPage/produts_card.html" %}
+
+          {% comment %} end product card {% endcomment %}
+
+        </div>
+
+        {% comment %} paginations start here {% endcomment %}
+        {% include "ShopPage/paginations.html" %}
+        {% comment %} paginnations end here {% endcomment %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock maincontent %}

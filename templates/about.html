@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block maincontent %}
+
+{% comment %} landing image start here {% endcomment %}
+{% include "AboutPage/landing_image.html" %}
+{% comment %} landing image ends here {% endcomment %}
+
+
+{% comment %} small nav starts {% endcomment %}
+<div class="custom-border-bottom py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">About</strong></div>
+    </div>
+  </div>
+</div>
+{% comment %} small nav ends {% endcomment %}
+
+
+{% comment %} small info starts here {% endcomment %}
+{% include "AboutPage/small_info.html" %}
+{% comment %} small info ends here {% endcomment %}
+
+
+{% comment %} how we started section starts {% endcomment %}
+{% include "AboutPage/how_we_started_section.html" %}
+{% comment %} how we started section ends {% endcomment %}
+
+
+{% comment %} the team section starts {% endcomment %}
+{% include "AboutPage/the_team.html" %}
+{% comment %} the team section ends {% endcomment %}
+
+{% endblock maincontent %}

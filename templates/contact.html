@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block maincontent %}
+
+{% comment %} landing image goes start here {% endcomment %}
+{% include "ContactPage/landing_image.html" %}
+{% comment %} landing image ends here {% endcomment %}
+
+{% comment %} mini nav start here {% endcomment %}
+<div class="custom-border-bottom py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact</strong></div>
+    </div>
+  </div>
+</div>
+{% comment %} mini nav ends here {% endcomment %}
+
+{% comment %} form section starts here {% endcomment %}
+{% include "ContactPage/form_part.html" %}
+{% comment %} form section ends here {% endcomment %}
+
+{% endblock maincontent %}

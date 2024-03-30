@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block maincontent %}
+
+{% comment %} landing image start {% endcomment %}
+{% include "HomePage/landing_image.html" %}
+{% comment %} landing image ends{% endcomment %}
+
+<div class="site-section">
+  <div class="container">
+
+    {% comment %} our product title start {% endcomment %}
+    <div class="row">
+        <div class="title-section mb-5 col-12">
+            <h2 class="text-uppercase">Popular Products</h2>
+        </div>
+    </div>
+    {% comment %} our product title ends {% endcomment %}
+
+   {% comment %} our actual products cards start {% endcomment %}
+    <div class="row">
+
+      {% include "HomePage/product_card.html" %}
+
+      {% comment %} we only use one {% endcomment %}
+        
+      {% include "HomePage/product_card.html" %}
+
+      {% include "HomePage/product_card.html" %}
+
+      {% include "HomePage/product_card.html" %}
+
+      {% include "HomePage/product_card.html" %}
+
+      {% include "HomePage/product_card.html" %}
+        
+    </div>
+    {% comment %} our actual products cards ends {% endcomment %}
+
+
+</div>
+
+{% endblock maincontent %}

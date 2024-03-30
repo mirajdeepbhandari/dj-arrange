@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="max-width: 500px;">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <!-- Add more indicators if you have more images -->
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/prod_1.png' %}" class="d-block w-100 carousel-image img-fluid" style="height: 500px; object-fit: contain;" alt="Small Size">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/prod_3.png' %}" class="d-block w-100 carousel-image img-fluid" style="height: 500px; object-fit: contain;" alt="Medium Size">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/prod_1.png' %}" class="d-block w-100 carousel-image img-fluid" style="height: 500px; object-fit: contain;" alt="Large Size">
+              </div>
+              <!-- Add more carousel items if you have more sizes -->
+            </div>
+            <a class="carousel-control-prev bg-black" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; padding: 14px;"></span>
+            </a>
+            <a class="carousel-control-next bg-black" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; padding: 14px;"></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h2 class="text-black">Gray Shoe</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas, distinctio, aperiam, ratione dolore.</p>
+          <p class="mb-4">Ex numquam veritatis debitis minima quo error quam eos dolorum quidem perferendis. Quos repellat dignissimos minus, eveniet nam voluptatibus molestias omnis reiciendis perspiciatis illum hic magni iste, velit aperiam quis.</p>
+          <p><strong class="text-primary h4">$50.00</strong></p>
+          <div class="mb-1 d-flex">
+            <label for="option-sm" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" name="shop-sizes"></span> <span class="d-inline-block text-black">Small</span>
+            </label>
+            <label for="option-md" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" name="shop-sizes"></span> <span class="d-inline-block text-black">Medium</span>
+            </label>
+            <label for="option-lg" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" name="shop-sizes"></span> <span class="d-inline-block text-black">Large</span>
+            </label>
+            <label for="option-xl" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl" name="shop-sizes"></span> <span class="d-inline-block text-black">Extra Large</span>
+            </label>
+            <!-- Add more size options if needed -->
+          </div>
+          <div class="mb-5">
+            <div class="input-group mb-3" style="max-width: 120px;">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+              </div>
+              <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+              </div>
+            </div>
+          </div>
+          <p><a href="{%url 'cart-page' %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
