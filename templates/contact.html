@@ -13,12 +13,14 @@
 <div class="custom-border-bottom py-3">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact</strong></div>
+      <div class="col-md-12 mb-0"><a href="{% url 'home-page' %}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact</strong></div>
     </div>
   </div>
 </div>
 {% comment %} mini nav ends here {% endcomment %}
 
+<span id="meetheree"> 
+  
 {% comment %} form section starts here {% endcomment %}
 {% include "ContactPage/form_part.html" %}
 {% comment %} form section ends here {% endcomment %}

@@ -1,39 +1,46 @@
-
 {% load static %}
 <div class="site-navbar bg-white py-2">
+    
     <div class="search-wrap">
       <div class="container">
         <a href="#" class="search-close js-search-close">
           <span class="icon-close2"></span>
         </a>
         <form action="#" method="post">
-          <input type="text" class="form-control" placeholder="Search keyword and hit enter..." />
+          <input type="text" class="form-control" placeholder="Search Products..." />
         </form>
       </div>
     </div>
+   
 
     <div class="container">
       <div class="d-flex align-items-center justify-content-between">
         <div class="logo">
           <div class="site-logo">
-            <a href="index.html" class="js-logo-clone">ShopMax</a>
+            <a href="{% url 'home-page' %}" class="js-logo-clone">ShopMax</a>
           </div>
         </div>
         <div class="main-nav d-none d-lg-block">
           <nav class="site-navigation text-right text-md-center" role="navigation">
             <ul class="site-menu js-clone-nav d-none d-lg-block">
-              <li><a href="{%url 'home-page' %}">Home</a></li>
-              <li><a href="{%url 'shop-page' %}">Shop</a></li>
-              <li><a href="{%url 'about-page' %}">About Us</a></li>
-              <li><a href="{%url 'contact-page' %}">Contact</a></li>
+              <li {% if request.resolver_match.url_name == 'home-page' %}class="active"{% endif %}><a href="{% url 'home-page' %}">Home</a></li>
+              <li {% if request.resolver_match.url_name == 'shop-page' %}class="active"{% endif %}><a href="{% url 'shop-page' %}">Shop</a></li>
+              <li {% if request.resolver_match.url_name == 'about-page' %}class="active"{% endif %}><a href="{% url 'about-page' %}">About Us</a></li>
+              <li {% if request.resolver_match.url_name == 'contact-page' %}class="active"{% endif %}><a href="{% url 'contact-page' %}">Contact</a></li>
             </ul>
           </nav>
         </div>
         <div class="icons">
+
+           {% comment %} displaying search icon in home and shop page only {% endcomment %}
+          {% if request.resolver_match.url_name == 'home-page' or request.resolver_match.url_name == 'shop-page' %}
           <a href="#" class="icons-btn d-inline-block js-search-open">
             <span class="icon-search"></span>
           </a>
-          <a href="{%url 'cart-page' %}" class="icons-btn d-inline-block bag">
+          {% endif %}
+          {% comment %} search icon end {% endcomment %}
+
+          <a href="{% url 'cart-page' %}" class="icons-btn d-inline-block bag">
             <span class="icon-shopping-bag"></span>
             <span class="number">2</span>
           </a>
